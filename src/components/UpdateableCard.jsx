@@ -94,6 +94,18 @@ export function UpdateableCard({ card, cards, color, colorFg, changeCard }) {
           />
         </div>
         <div>
+          <Label htmlFor="amount">Aantal kaartjes</Label>
+          <Input
+            defaultValue={card.amount}
+            type="number"
+            id="amount"
+            name="amount"
+            onChange={(e) => {
+              changeCard(card.id, "amount", Number(e.target.value));
+            }}
+          />
+        </div>
+        <div>
           <Label htmlFor="image">Afbeelding</Label>
           <Input
             defaultValue={card.image}
@@ -108,39 +120,51 @@ export function UpdateableCard({ card, cards, color, colorFg, changeCard }) {
           <div className="">
             <Label htmlFor="image">Winst en verlies</Label>
           </div>
-          <small>Klik op een kaart deze om te veranderen van kant</small>
+          <small className="text-gray-700">
+            Klik op een kaart deze om te veranderen van kant
+          </small>
           <div className="grid grid-cols-2 text-sm gap-x-2">
-            <div className="h-full py-2 border rounded-lg">
-              {card.wins.map((win) => (
-                <div
-                  key={win}
-                  className="relative px-3 py-1 hover:bg-gray-100 group hover:cursor-pointer"
-                  onClick={() => {
-                    changePlace(win, true);
-                  }}
-                >
-                  <p className="pr-6">{cards[win].name}</p>
-                  <ArrowLeftRight className="absolute hidden w-4 h-5 text-gray-500 transform -translate-y-1/2 group-hover:block top-1/2 right-2" />
-                </div>
-              ))}
+            <div className="h-full">
+              <p>Winst</p>
+              <div className="h-full py-2 border rounded-lg">
+                {card.wins.map((win) => (
+                  <div
+                    key={win}
+                    className="relative px-3 py-1 hover:bg-gray-100 group hover:cursor-pointer"
+                    onClick={() => {
+                      changePlace(win, true);
+                    }}
+                  >
+                    <p className="pr-6">
+                      {cards[win].id}. {cards[win].name}
+                    </p>
+                    <ArrowLeftRight className="absolute hidden w-4 h-5 text-gray-500 transform -translate-y-1/2 group-hover:block top-1/2 right-2" />
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="h-full py-2 border rounded-lg">
-              {card.loses.map((lose) => (
-                <div
-                  key={lose}
-                  className="relative px-3 py-1 hover:bg-gray-100 group hover:cursor-pointer"
-                  onClick={() => {
-                    changePlace(lose, false);
-                  }}
-                >
-                  <p className="pr-6">{cards[lose].name}</p>
-                  <ArrowLeftRight className="absolute hidden w-4 h-5 text-gray-500 transform -translate-y-1/2 group-hover:block top-1/2 right-2" />
-                </div>
-              ))}
+            <div className="h-full">
+              <p>Verlies</p>
+              <div className="h-full py-2 border rounded-lg">
+                {card.loses.map((lose) => (
+                  <div
+                    key={lose}
+                    className="relative px-3 py-1 hover:bg-gray-100 group hover:cursor-pointer"
+                    onClick={() => {
+                      changePlace(lose, false);
+                    }}
+                  >
+                    <p className="pr-6">
+                      {cards[lose].id}. {cards[lose].name}
+                    </p>
+                    <ArrowLeftRight className="absolute hidden w-4 h-5 text-gray-500 transform -translate-y-1/2 group-hover:block top-1/2 right-2" />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center mt-6 space-x-2">
           <Checkbox
             id="touch"
             checked={card.canTouch}

@@ -169,6 +169,7 @@ export default function Stratego() {
       updatedCards[id] = { ...updatedCards[id], [key]: value };
       return updatedCards;
     });
+    console.log(cards[id]);
   };
 
   const changeColor = (color) => {
