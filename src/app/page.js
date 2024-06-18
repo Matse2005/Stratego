@@ -473,15 +473,34 @@ export default function Stratego() {
             >
               Kaartjes printen
             </Button>
-            <Button
-              variant="outline"
-              className="w-full sm:w-auto"
-              onClick={() => {
-                setCards(themes.default);
-              }}
-            >
-              Reset
-            </Button>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button variant="outline">Reset</Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>
+                    Ben je zeker dat wil resetten?
+                  </AlertDialogTitle>
+                  <AlertDialogDescription>
+                    actie kan niet ongedaan gemaakt worden. Dit zal wijzigingen
+                    permanent verwijderen en zullen opnieuw toegepast moeten
+                    worden.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Cancel</AlertDialogCancel>
+                  <AlertDialogAction
+                    onClick={() => {
+                      setCards(themes.default);
+                    }}
+                    variant="destructive"
+                  >
+                    Resetten
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
           </div>
           <div className="space-y-2 sm:flex sm:space-x-2 sm:items-center sm:space-y-0">
             <div className="w-full sm:max-w-xs">
