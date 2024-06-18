@@ -8,6 +8,7 @@ import { Dices, Info } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import Link from "next/link";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
 
 function getTextColor(backgroundColor) {
   const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(backgroundColor);
@@ -229,43 +230,56 @@ export default function Stratego() {
         </Alert>
 
         <div className="flex items-center justify-between w-full">
-          <Button
-            onClick={() => {
-              window.print();
-            }}
-          >
-            Kaartjes printen
-          </Button>
-          {isClient && (
-            <div className="relative inset-0 z-40 h-12 max-w-xs overflow-hidden border-none rounded-lg right-4 bottom-6 form-control border-color">
-              <Input
-                type="text"
-                value={color}
-                placeholder="Hexcode"
-                className="w-full h-full px-6 font-medium bg-white rounded-lg pl-14"
-                onChange={(e) => changeColor(e.target.value)}
-              />
-              <input
-                type="color"
-                value={color}
-                onChange={(newColor) => {
-                  changeColor(newColor.target.value);
-                }}
-                className="absolute transform -translate-y-1/2 border border-none rounded cursor-pointer top-1/2 w-7 h-7 left-4"
-                style={{ WebkitAppearance: "none" }}
-              />
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute transform -translate-y-1/2 top-1/2 right-4"
-                onClick={() => {
-                  changeColor(getRandomColor());
-                }}
-              >
-                <Dices className="w-4 h-4" />
-              </Button>
-            </div>
-          )}
+          <div className="flex items-center space-x-2">
+            <Button
+              onClick={() => {
+                window.print();
+              }}
+            >
+              Kaartjes printen
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setCards(defaultCards);
+              }}
+            >
+              Reset
+            </Button>
+          </div>
+          <div className="flex items-center space-x-2">
+            <ThemeSwitch setCards={setCards} />
+            {isClient && (
+              <div className="relative inset-0 z-40 h-12 max-w-xs overflow-hidden border-none rounded-lg right-4 bottom-6 form-control border-color">
+                <Input
+                  type="text"
+                  value={color}
+                  placeholder="Hexcode"
+                  className="w-full h-full px-6 font-medium bg-white rounded-lg pl-14"
+                  onChange={(e) => changeColor(e.target.value)}
+                />
+                <input
+                  type="color"
+                  value={color}
+                  onChange={(newColor) => {
+                    changeColor(newColor.target.value);
+                  }}
+                  className="absolute transform -translate-y-1/2 border border-none rounded cursor-pointer top-1/2 w-7 h-7 left-4"
+                  style={{ WebkitAppearance: "none" }}
+                />
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute transform -translate-y-1/2 top-1/2 right-4"
+                  onClick={() => {
+                    changeColor(getRandomColor());
+                  }}
+                >
+                  <Dices className="w-4 h-4" />
+                </Button>
+              </div>
+            )}
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {[...Object.values(cards)]?.map((card) => (

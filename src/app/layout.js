@@ -7,6 +7,8 @@ export const metadata = {
   title: "Stratego Kaartjes",
   description:
     "Maak aan de hand van deze tool snel en gemakkelijk volledig aanpasbare stratego kaartjes!",
+  keywords:
+    "Stratego, Generator, Online, Stratego Kaartjes, Kaartjes, Levende Startego, Jeugdwerk",
 };
 
 export default function RootLayout({ children }) {
