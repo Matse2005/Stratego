@@ -23,23 +23,23 @@ const themes = [
     value: "default",
     label: "Standaard",
   },
-  {
-    value: "studio100",
-    label: "Studio 100",
-  },
+  // {
+  //   value: "studio100",
+  //   label: "Studio 100",
+  // },
   {
     value: "disney",
     label: "Disney",
   },
-  {
-    value: "piraten",
-    label: "Piraten",
-  },
+  // {
+  //   value: "piraten",
+  //   label: "Piraten",
+  // },
 ];
 
-export function ThemeSwitch({ setCards }) {
+export function ThemeSwitch({ changeTheme }) {
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState("default");
 
   return (
     <Popover open={open} onOpenChange={setOpen}>
@@ -69,6 +69,7 @@ export function ThemeSwitch({ setCards }) {
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
                     setOpen(false);
+                    changeTheme(currentValue);
                   }}
                 >
                   <Check

@@ -32,7 +32,7 @@ const defaultCards = {
   0: {
     id: 0,
     name: "Bom",
-    image: "/bom.png",
+    image: "/default/bom.png",
     wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
     loses: [3],
     canTouch: false,
@@ -42,7 +42,7 @@ const defaultCards = {
   1: {
     id: 1,
     name: "Spion",
-    image: "/spion.png",
+    image: "/default/spion.png",
     wins: [10],
     loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
     canTouch: true,
@@ -52,7 +52,7 @@ const defaultCards = {
   2: {
     id: 2,
     name: "Verkenner",
-    image: "/verkenner.png",
+    image: "/default/verkenner.png",
     wins: [1],
     loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
     canTouch: true,
@@ -62,7 +62,7 @@ const defaultCards = {
   3: {
     id: 3,
     name: "Mineur",
-    image: "/mineur.png",
+    image: "/default/mineur.png",
     wins: [0, 1, 2],
     loses: [4, 5, 6, 7, 8, 9, 10],
     canTouch: true,
@@ -72,7 +72,7 @@ const defaultCards = {
   4: {
     id: 4,
     name: "Sergeant",
-    image: "/sergeant.png",
+    image: "/default/sergeant.png",
     wins: [1, 2, 3],
     loses: [0, 5, 6, 7, 8, 9, 10],
     canTouch: true,
@@ -82,7 +82,7 @@ const defaultCards = {
   5: {
     id: 5,
     name: "Luitenant",
-    image: "/luitenant.png",
+    image: "/default/luitenant.png",
     wins: [1, 2, 3, 4],
     loses: [0, 6, 7, 8, 9, 10],
     canTouch: true,
@@ -92,7 +92,7 @@ const defaultCards = {
   6: {
     id: 6,
     name: "Kapitein",
-    image: "/kapitein.png",
+    image: "/default/kapitein.png",
     wins: [1, 2, 3, 4, 5],
     loses: [0, 7, 8, 9, 10],
     canTouch: true,
@@ -102,7 +102,7 @@ const defaultCards = {
   7: {
     id: 7,
     name: "Majoor",
-    image: "/majoor.png",
+    image: "/default/majoor.png",
     wins: [1, 2, 3, 4, 5, 6],
     loses: [0, 8, 9, 10],
     canTouch: true,
@@ -112,7 +112,7 @@ const defaultCards = {
   8: {
     id: 8,
     name: "Kolonel",
-    image: "/kolonel.png",
+    image: "/default/kolonel.png",
     wins: [1, 2, 3, 4, 5, 6, 7],
     loses: [0, 9, 10],
     canTouch: true,
@@ -122,7 +122,7 @@ const defaultCards = {
   9: {
     id: 9,
     name: "Generaal",
-    image: "/generaal.png",
+    image: "/default/generaal.png",
     wins: [1, 2, 3, 4, 5, 6, 7, 8],
     loses: [0, 10],
     canTouch: true,
@@ -132,7 +132,7 @@ const defaultCards = {
   10: {
     id: 10,
     name: "Maarschalk",
-    image: "/maarschalk.png",
+    image: "/default/maarschalk.png",
     wins: [2, 3, 4, 5, 6, 7, 8, 9],
     loses: [0, 1],
     canTouch: true,
@@ -142,7 +142,7 @@ const defaultCards = {
   99: {
     id: 99,
     name: "Vlag",
-    image: "/vlag.png",
+    image: "/default/vlag.png",
     wins: [],
     loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     canTouch: false,
@@ -152,11 +152,11 @@ const defaultCards = {
 };
 
 const themes = {
-  standard: {
+  default: {
     0: {
       id: 0,
       name: "Bom",
-      image: "/bom.png",
+      image: "/default/bom.png",
       wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
       loses: [3],
       canTouch: false,
@@ -166,7 +166,7 @@ const themes = {
     1: {
       id: 1,
       name: "Spion",
-      image: "/spion.png",
+      image: "/default/spion.png",
       wins: [10],
       loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
       canTouch: true,
@@ -176,7 +176,7 @@ const themes = {
     2: {
       id: 2,
       name: "Verkenner",
-      image: "/verkenner.png",
+      image: "/default/verkenner.png",
       wins: [1],
       loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -186,7 +186,7 @@ const themes = {
     3: {
       id: 3,
       name: "Mineur",
-      image: "/mineur.png",
+      image: "/default/mineur.png",
       wins: [0, 1, 2],
       loses: [4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -196,7 +196,7 @@ const themes = {
     4: {
       id: 4,
       name: "Sergeant",
-      image: "/sergeant.png",
+      image: "/default/sergeant.png",
       wins: [1, 2, 3],
       loses: [0, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -206,7 +206,7 @@ const themes = {
     5: {
       id: 5,
       name: "Luitenant",
-      image: "/luitenant.png",
+      image: "/default/luitenant.png",
       wins: [1, 2, 3, 4],
       loses: [0, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -216,7 +216,7 @@ const themes = {
     6: {
       id: 6,
       name: "Kapitein",
-      image: "/kapitein.png",
+      image: "/default/kapitein.png",
       wins: [1, 2, 3, 4, 5],
       loses: [0, 7, 8, 9, 10],
       canTouch: true,
@@ -226,7 +226,7 @@ const themes = {
     7: {
       id: 7,
       name: "Majoor",
-      image: "/majoor.png",
+      image: "/default/majoor.png",
       wins: [1, 2, 3, 4, 5, 6],
       loses: [0, 8, 9, 10],
       canTouch: true,
@@ -236,7 +236,7 @@ const themes = {
     8: {
       id: 8,
       name: "Kolonel",
-      image: "/kolonel.png",
+      image: "/default/kolonel.png",
       wins: [1, 2, 3, 4, 5, 6, 7],
       loses: [0, 9, 10],
       canTouch: true,
@@ -246,7 +246,7 @@ const themes = {
     9: {
       id: 9,
       name: "Generaal",
-      image: "/generaal.png",
+      image: "/default/generaal.png",
       wins: [1, 2, 3, 4, 5, 6, 7, 8],
       loses: [0, 10],
       canTouch: true,
@@ -256,7 +256,7 @@ const themes = {
     10: {
       id: 10,
       name: "Maarschalk",
-      image: "/maarschalk.png",
+      image: "/default/maarschalk.png",
       wins: [2, 3, 4, 5, 6, 7, 8, 9],
       loses: [0, 1],
       canTouch: true,
@@ -266,7 +266,7 @@ const themes = {
     99: {
       id: 99,
       name: "Vlag",
-      image: "/vlag.png",
+      image: "/default/vlag.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
@@ -277,8 +277,8 @@ const themes = {
   disney: {
     0: {
       id: 0,
-      name: "Bom",
-      image: "/bom.png",
+      name: "Mickey Mouse's Tovenaars Hoed",
+      image: "/disney/mickey-mouses-sorcerers-hats.png",
       wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
       loses: [3],
       canTouch: false,
@@ -287,8 +287,8 @@ const themes = {
     },
     1: {
       id: 1,
-      name: "Spion",
-      image: "/spion.png",
+      name: "Tinkerbel",
+      image: "/disney/tinker-bell.png",
       wins: [10],
       loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
       canTouch: true,
@@ -297,8 +297,8 @@ const themes = {
     },
     2: {
       id: 2,
-      name: "Verkenner",
-      image: "/verkenner.png",
+      name: "Peter Pan",
+      image: "/disney/peter-pan.png",
       wins: [1],
       loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -307,8 +307,8 @@ const themes = {
     },
     3: {
       id: 3,
-      name: "Mineur",
-      image: "/mineur.png",
+      name: "Dagobert Duck",
+      image: "/disney/dagobert-duck.png",
       wins: [0, 1, 2],
       loses: [4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -317,8 +317,8 @@ const themes = {
     },
     4: {
       id: 4,
-      name: "Sergeant",
-      image: "/sergeant.png",
+      name: "Aladdin",
+      image: "/disney/aladdin.png",
       wins: [1, 2, 3],
       loses: [0, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -327,8 +327,8 @@ const themes = {
     },
     5: {
       id: 5,
-      name: "Luitenant",
-      image: "/luitenant.png",
+      name: "Buzz Lightyear",
+      image: "/disney/buzz-lightyear.png",
       wins: [1, 2, 3, 4],
       loses: [0, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -337,8 +337,8 @@ const themes = {
     },
     6: {
       id: 6,
-      name: "Kapitein",
-      image: "/kapitein.png",
+      name: "Raya",
+      image: "/disney/raya.png",
       wins: [1, 2, 3, 4, 5],
       loses: [0, 7, 8, 9, 10],
       canTouch: true,
@@ -347,8 +347,8 @@ const themes = {
     },
     7: {
       id: 7,
-      name: "Majoor",
-      image: "/majoor.png",
+      name: "Maui",
+      image: "/disney/maui.png",
       wins: [1, 2, 3, 4, 5, 6],
       loses: [0, 8, 9, 10],
       canTouch: true,
@@ -357,8 +357,8 @@ const themes = {
     },
     8: {
       id: 8,
-      name: "Kolonel",
-      image: "/kolonel.png",
+      name: "Elsa",
+      image: "/disney/elsa.png",
       wins: [1, 2, 3, 4, 5, 6, 7],
       loses: [0, 9, 10],
       canTouch: true,
@@ -367,8 +367,8 @@ const themes = {
     },
     9: {
       id: 9,
-      name: "Generaal",
-      image: "/generaal.png",
+      name: "Simba",
+      image: "/disney/simba.png",
       wins: [1, 2, 3, 4, 5, 6, 7, 8],
       loses: [0, 10],
       canTouch: true,
@@ -377,8 +377,8 @@ const themes = {
     },
     10: {
       id: 10,
-      name: "Maarschalk",
-      image: "/maarschalk.png",
+      name: "Mickey Mouse",
+      image: "/disney/mickey-mouse.png",
       wins: [2, 3, 4, 5, 6, 7, 8, 9],
       loses: [0, 1],
       canTouch: true,
@@ -387,8 +387,8 @@ const themes = {
     },
     99: {
       id: 99,
-      name: "Vlag",
-      image: "/vlag.png",
+      name: "Assepoester's Glazen Muiltje",
+      image: "/disney/cinderellas-glass-slipper.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
@@ -399,14 +399,15 @@ const themes = {
 };
 
 export default function Stratego() {
-  const [cards, setCards] = useState(themes.standard);
+  const [cards, setCards] = useState(themes.default);
   const [color, setColor] = useState("#ffffff");
   const [colorFg, setColorFg] = useState(getTextColor("#ffffff"));
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    setColor(getRandomColor());
-    setColorFg(getTextColor(color));
+    var newColor = getRandomColor();
+    setColor(newColor);
+    setColorFg(getTextColor(newColor));
     setIsClient(true);
   }, []);
 
@@ -417,6 +418,11 @@ export default function Stratego() {
       return updatedCards;
     });
     console.log(cards[id]);
+  };
+
+  const changeTheme = (theme) => {
+    setCards(themes[theme]);
+    console.log(cards);
   };
 
   const changeColor = (color) => {
@@ -494,7 +500,7 @@ export default function Stratego() {
             </Button>
           </div>
           <div className="flex items-center space-x-2">
-            {/* <ThemeSwitch setCards={setCards} /> */}
+            <ThemeSwitch changeTheme={changeTheme} />
             {isClient && (
               <div className="relative inset-0 z-40 h-12 max-w-xs overflow-hidden border-none rounded-lg right-4 bottom-6 form-control border-color">
                 <Input
