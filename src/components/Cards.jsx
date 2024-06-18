@@ -22,7 +22,7 @@ export function Card({ card, cards, color, colorFg }) {
           <h2 className="mb-2 text-2xl font-bold text-center text-black print:text-xs print:mb-1">
             {card.name}
           </h2>
-          <p className="text-sm print:-mt-2 print:text-[7px] text-gray-700">
+          <p className="text-sm print:-mt-2 text-center print:text-[7px] text-gray-700">
             Wint van:
           </p>
           {card.wins.length > 0 ? (
@@ -37,11 +37,11 @@ export function Card({ card, cards, color, colorFg }) {
               ))}
             </div>
           ) : (
-            <p className="text-sm print:-mt-2 print:text-[7px] text-gray-700">
+            <p className="text-sm print:-mt-2 text-center print:text-[7px] text-gray-700">
               Wint nooit
             </p>
           )}
-          <p className="mt-2 print:mt-0 text-sm print:text-[7px] text-gray-700">
+          <p className="mt-2 print:mt-0 text-sm text-center print:text-[7px] text-gray-700">
             Verliest van:
           </p>
           {card.loses.length > 0 ? (
@@ -56,7 +56,7 @@ export function Card({ card, cards, color, colorFg }) {
               ))}
             </div>
           ) : (
-            <p className="mt-2 print:mt-1 text-sm print:text-[7px] text-gray-700">
+            <p className="print:-mt-2 text-sm print:text-[7px] text-center text-gray-700">
               Verliest nooit
             </p>
           )}

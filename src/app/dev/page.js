@@ -28,8 +28,131 @@ function getRandomColor() {
   return color;
 }
 
-export default function Stratego() {
-  const defaultCards = {
+const defaultCards = {
+  0: {
+    id: 0,
+    name: "Bom",
+    image: "/bom.png",
+    wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
+    loses: [3],
+    canTouch: false,
+    amount: 1,
+    numberVisible: false,
+  },
+  1: {
+    id: 1,
+    name: "Spion",
+    image: "/spion.png",
+    wins: [10],
+    loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
+    canTouch: true,
+    amount: 1,
+    numberVisible: true,
+  },
+  2: {
+    id: 2,
+    name: "Verkenner",
+    image: "/verkenner.png",
+    wins: [1],
+    loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
+    canTouch: true,
+    amount: 8,
+    numberVisible: true,
+  },
+  3: {
+    id: 3,
+    name: "Mineur",
+    image: "/mineur.png",
+    wins: [0, 1, 2],
+    loses: [4, 5, 6, 7, 8, 9, 10],
+    canTouch: true,
+    amount: 1,
+    numberVisible: true,
+  },
+  4: {
+    id: 4,
+    name: "Sergeant",
+    image: "/sergeant.png",
+    wins: [1, 2, 3],
+    loses: [0, 5, 6, 7, 8, 9, 10],
+    canTouch: true,
+    amount: 5,
+    numberVisible: true,
+  },
+  5: {
+    id: 5,
+    name: "Luitenant",
+    image: "/luitenant.png",
+    wins: [1, 2, 3, 4],
+    loses: [0, 6, 7, 8, 9, 10],
+    canTouch: true,
+    amount: 4,
+    numberVisible: true,
+  },
+  6: {
+    id: 6,
+    name: "Kapitein",
+    image: "/kapitein.png",
+    wins: [1, 2, 3, 4, 5],
+    loses: [0, 7, 8, 9, 10],
+    canTouch: true,
+    amount: 4,
+    numberVisible: true,
+  },
+  7: {
+    id: 7,
+    name: "Majoor",
+    image: "/majoor.png",
+    wins: [1, 2, 3, 4, 5, 6],
+    loses: [0, 8, 9, 10],
+    canTouch: true,
+    amount: 4,
+    numberVisible: true,
+  },
+  8: {
+    id: 8,
+    name: "Kolonel",
+    image: "/kolonel.png",
+    wins: [1, 2, 3, 4, 5, 6, 7],
+    loses: [0, 9, 10],
+    canTouch: true,
+    amount: 3,
+    numberVisible: true,
+  },
+  9: {
+    id: 9,
+    name: "Generaal",
+    image: "/generaal.png",
+    wins: [1, 2, 3, 4, 5, 6, 7, 8],
+    loses: [0, 10],
+    canTouch: true,
+    amount: 2,
+    numberVisible: true,
+  },
+  10: {
+    id: 10,
+    name: "Maarschalk",
+    image: "/maarschalk.png",
+    wins: [2, 3, 4, 5, 6, 7, 8, 9],
+    loses: [0, 1],
+    canTouch: true,
+    amount: 1,
+    numberVisible: true,
+  },
+  99: {
+    id: 99,
+    name: "Vlag",
+    image: "/vlag.png",
+    wins: [],
+    loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    canTouch: false,
+    amount: 1,
+    numberVisible: false,
+  },
+};
+
+const themes = {
+  standard: {
     0: {
       id: 0,
       name: "Bom",
@@ -150,15 +273,138 @@ export default function Stratego() {
       amount: 1,
       numberVisible: false,
     },
-  };
+  },
+  disney: {
+    0: {
+      id: 0,
+      name: "Bom",
+      image: "/bom.png",
+      wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
+      loses: [3],
+      canTouch: false,
+      amount: 1,
+      numberVisible: false,
+    },
+    1: {
+      id: 1,
+      name: "Spion",
+      image: "/spion.png",
+      wins: [10],
+      loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    2: {
+      id: 2,
+      name: "Verkenner",
+      image: "/verkenner.png",
+      wins: [1],
+      loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 8,
+      numberVisible: true,
+    },
+    3: {
+      id: 3,
+      name: "Mineur",
+      image: "/mineur.png",
+      wins: [0, 1, 2],
+      loses: [4, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    4: {
+      id: 4,
+      name: "Sergeant",
+      image: "/sergeant.png",
+      wins: [1, 2, 3],
+      loses: [0, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 5,
+      numberVisible: true,
+    },
+    5: {
+      id: 5,
+      name: "Luitenant",
+      image: "/luitenant.png",
+      wins: [1, 2, 3, 4],
+      loses: [0, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    6: {
+      id: 6,
+      name: "Kapitein",
+      image: "/kapitein.png",
+      wins: [1, 2, 3, 4, 5],
+      loses: [0, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    7: {
+      id: 7,
+      name: "Majoor",
+      image: "/majoor.png",
+      wins: [1, 2, 3, 4, 5, 6],
+      loses: [0, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    8: {
+      id: 8,
+      name: "Kolonel",
+      image: "/kolonel.png",
+      wins: [1, 2, 3, 4, 5, 6, 7],
+      loses: [0, 9, 10],
+      canTouch: true,
+      amount: 3,
+      numberVisible: true,
+    },
+    9: {
+      id: 9,
+      name: "Generaal",
+      image: "/generaal.png",
+      wins: [1, 2, 3, 4, 5, 6, 7, 8],
+      loses: [0, 10],
+      canTouch: true,
+      amount: 2,
+      numberVisible: true,
+    },
+    10: {
+      id: 10,
+      name: "Maarschalk",
+      image: "/maarschalk.png",
+      wins: [2, 3, 4, 5, 6, 7, 8, 9],
+      loses: [0, 1],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    99: {
+      id: 99,
+      name: "Vlag",
+      image: "/vlag.png",
+      wins: [],
+      loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: false,
+      amount: 1,
+      numberVisible: false,
+    },
+  },
+};
 
-  const [cards, setCards] = useState(defaultCards);
+export default function Stratego() {
+  const [cards, setCards] = useState(themes.standard);
   const [color, setColor] = useState("#ffffff");
   const [colorFg, setColorFg] = useState(getTextColor("#ffffff"));
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Sync the initial color state and foreground color on the client side
     setColor(getRandomColor());
     setColorFg(getTextColor(color));
     setIsClient(true);
@@ -248,7 +494,7 @@ export default function Stratego() {
             </Button>
           </div>
           <div className="flex items-center space-x-2">
-            <ThemeSwitch setCards={setCards} />
+            {/* <ThemeSwitch setCards={setCards} /> */}
             {isClient && (
               <div className="relative inset-0 z-40 h-12 max-w-xs overflow-hidden border-none rounded-lg right-4 bottom-6 form-control border-color">
                 <Input
