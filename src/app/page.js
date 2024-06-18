@@ -8,6 +8,7 @@ import { Dices, Info } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import Link from "next/link";
+import { ThemeSwitch } from "@/components/ThemeSwitch";
 
 function getTextColor(backgroundColor) {
   const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(backgroundColor);
@@ -26,13 +27,12 @@ function getRandomColor() {
   }
   return color;
 }
-
-export default function Home() {
-  const defaultCards = {
+const themes = {
+  default: {
     0: {
       id: 0,
       name: "Bom",
-      image: "/bom.png",
+      image: "/default/bom.png",
       wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
       loses: [3],
       canTouch: false,
@@ -42,7 +42,7 @@ export default function Home() {
     1: {
       id: 1,
       name: "Spion",
-      image: "/spion.png",
+      image: "/default/spion.png",
       wins: [10],
       loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
       canTouch: true,
@@ -52,7 +52,7 @@ export default function Home() {
     2: {
       id: 2,
       name: "Verkenner",
-      image: "/verkenner.png",
+      image: "/default/verkenner.png",
       wins: [1],
       loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -62,7 +62,7 @@ export default function Home() {
     3: {
       id: 3,
       name: "Mineur",
-      image: "/mineur.png",
+      image: "/default/mineur.png",
       wins: [0, 1, 2],
       loses: [4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -72,7 +72,7 @@ export default function Home() {
     4: {
       id: 4,
       name: "Sergeant",
-      image: "/sergeant.png",
+      image: "/default/sergeant.png",
       wins: [1, 2, 3],
       loses: [0, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -82,7 +82,7 @@ export default function Home() {
     5: {
       id: 5,
       name: "Luitenant",
-      image: "/luitenant.png",
+      image: "/default/luitenant.png",
       wins: [1, 2, 3, 4],
       loses: [0, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -92,7 +92,7 @@ export default function Home() {
     6: {
       id: 6,
       name: "Kapitein",
-      image: "/kapitein.png",
+      image: "/default/kapitein.png",
       wins: [1, 2, 3, 4, 5],
       loses: [0, 7, 8, 9, 10],
       canTouch: true,
@@ -102,7 +102,7 @@ export default function Home() {
     7: {
       id: 7,
       name: "Majoor",
-      image: "/majoor.png",
+      image: "/default/majoor.png",
       wins: [1, 2, 3, 4, 5, 6],
       loses: [0, 8, 9, 10],
       canTouch: true,
@@ -112,7 +112,7 @@ export default function Home() {
     8: {
       id: 8,
       name: "Kolonel",
-      image: "/kolonel.png",
+      image: "/default/kolonel.png",
       wins: [1, 2, 3, 4, 5, 6, 7],
       loses: [0, 9, 10],
       canTouch: true,
@@ -122,7 +122,7 @@ export default function Home() {
     9: {
       id: 9,
       name: "Generaal",
-      image: "/generaal.png",
+      image: "/default/generaal.png",
       wins: [1, 2, 3, 4, 5, 6, 7, 8],
       loses: [0, 10],
       canTouch: true,
@@ -132,7 +132,7 @@ export default function Home() {
     10: {
       id: 10,
       name: "Maarschalk",
-      image: "/maarschalk.png",
+      image: "/default/maarschalk.png",
       wins: [2, 3, 4, 5, 6, 7, 8, 9],
       loses: [0, 1],
       canTouch: true,
@@ -142,24 +142,270 @@ export default function Home() {
     99: {
       id: 99,
       name: "Vlag",
-      image: "/vlag.png",
+      image: "/default/vlag.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
       amount: 1,
       numberVisible: false,
     },
-  };
+  },
+  disney: {
+    0: {
+      id: 0,
+      name: "Mickey Mouse's Tovenaars Hoed",
+      image: "/disney/mickey-mouses-sorcerers-hats.png",
+      wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
+      loses: [3],
+      canTouch: false,
+      amount: 1,
+      numberVisible: false,
+    },
+    1: {
+      id: 1,
+      name: "Tinkerbel",
+      image: "/disney/tinker-bell.png",
+      wins: [10],
+      loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    2: {
+      id: 2,
+      name: "Peter Pan",
+      image: "/disney/peter-pan.png",
+      wins: [1],
+      loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 8,
+      numberVisible: true,
+    },
+    3: {
+      id: 3,
+      name: "Dagobert Duck",
+      image: "/disney/dagobert-duck.png",
+      wins: [0, 1, 2],
+      loses: [4, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    4: {
+      id: 4,
+      name: "Aladdin",
+      image: "/disney/aladdin.png",
+      wins: [1, 2, 3],
+      loses: [0, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 5,
+      numberVisible: true,
+    },
+    5: {
+      id: 5,
+      name: "Buzz Lightyear",
+      image: "/disney/buzz-lightyear.png",
+      wins: [1, 2, 3, 4],
+      loses: [0, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    6: {
+      id: 6,
+      name: "Raya",
+      image: "/disney/raya.png",
+      wins: [1, 2, 3, 4, 5],
+      loses: [0, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    7: {
+      id: 7,
+      name: "Maui",
+      image: "/disney/maui.png",
+      wins: [1, 2, 3, 4, 5, 6],
+      loses: [0, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    8: {
+      id: 8,
+      name: "Elsa",
+      image: "/disney/elsa.png",
+      wins: [1, 2, 3, 4, 5, 6, 7],
+      loses: [0, 9, 10],
+      canTouch: true,
+      amount: 3,
+      numberVisible: true,
+    },
+    9: {
+      id: 9,
+      name: "Simba",
+      image: "/disney/simba.png",
+      wins: [1, 2, 3, 4, 5, 6, 7, 8],
+      loses: [0, 10],
+      canTouch: true,
+      amount: 2,
+      numberVisible: true,
+    },
+    10: {
+      id: 10,
+      name: "Mickey Mouse",
+      image: "/disney/mickey-mouse.png",
+      wins: [2, 3, 4, 5, 6, 7, 8, 9],
+      loses: [0, 1],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    99: {
+      id: 99,
+      name: "Assepoester's Glazen Muiltje",
+      image: "/disney/cinderellas-glass-slipper.png",
+      wins: [],
+      loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: false,
+      amount: 1,
+      numberVisible: false,
+    },
+  },
+  studio100: {
+    0: {
+      id: 0,
+      name: "Plopkoeken",
+      image: "/studio100/plopkoeken.jpg",
+      wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
+      loses: [3],
+      canTouch: false,
+      amount: 1,
+      numberVisible: false,
+    },
+    1: {
+      id: 1,
+      name: "Kabouter Plop",
+      image: "/studio100/plop.png",
+      wins: [10],
+      loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    2: {
+      id: 2,
+      name: "Gamekeeper",
+      image: "/studio100/gamekeepers.png",
+      wins: [1, 3, 4, 5, 6, 7, 8, 9, 10],
+      loses: [0],
+      canTouch: true,
+      amount: 8,
+      numberVisible: true,
+    },
+    3: {
+      id: 3,
+      name: "Piet Piraat",
+      image: "/studio100/piet-piraat.png",
+      wins: [0, 1, 2],
+      loses: [4, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    4: {
+      id: 4,
+      name: "K3",
+      image: "/studio100/k3.png",
+      wins: [1, 2, 3],
+      loses: [0, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 5,
+      numberVisible: true,
+    },
+    5: {
+      id: 5,
+      name: "Bumba",
+      image: "/studio100/bumba.png",
+      wins: [1, 2, 3, 4],
+      loses: [0, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    6: {
+      id: 6,
+      name: "Mega Mindy",
+      image: "/studio100/mega-mindy.png",
+      wins: [1, 2, 3, 5],
+      loses: [0, 4, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    7: {
+      id: 7,
+      name: "Maya de Bij",
+      image: "/studio100/maya-de-bij.png",
+      wins: [1, 2, 3, 4, 5, 6],
+      loses: [0, 8, 9, 10],
+      canTouch: true,
+      amount: 4,
+      numberVisible: true,
+    },
+    8: {
+      id: 8,
+      name: "Nachtwacht",
+      image: "/studio100/nachtwacht.png",
+      wins: [1, 2, 3, 4, 5, 6, 7],
+      loses: [0, 9, 10],
+      canTouch: true,
+      amount: 3,
+      numberVisible: true,
+    },
+    9: {
+      id: 9,
+      name: "Samson",
+      image: "/studio100/samson.png",
+      wins: [1, 2, 3, 4, 5, 6, 7, 8],
+      loses: [0, 10],
+      canTouch: true,
+      amount: 2,
+      numberVisible: true,
+    },
+    10: {
+      id: 10,
+      name: "Freddy",
+      image: "/studio100/100-wolf.png",
+      wins: [2, 3, 4, 5, 6, 7, 8, 9],
+      loses: [0, 1],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    99: {
+      id: 99,
+      name: "K3 Brooddoos",
+      image: "/studio100/k3-brooddoos.jpg",
+      wins: [],
+      loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: false,
+      amount: 1,
+      numberVisible: false,
+    },
+  },
+};
 
-  const [cards, setCards] = useState(defaultCards);
+export default function Stratego() {
+  const [cards, setCards] = useState(themes.default);
   const [color, setColor] = useState("#ffffff");
   const [colorFg, setColorFg] = useState(getTextColor("#ffffff"));
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Sync the initial color state and foreground color on the client side
-    setColor(getRandomColor());
-    setColorFg(getTextColor(color));
+    var newColor = getRandomColor();
+    setColor(newColor);
+    setColorFg(getTextColor(newColor));
     setIsClient(true);
   }, []);
 
@@ -169,6 +415,12 @@ export default function Home() {
       updatedCards[id] = { ...updatedCards[id], [key]: value };
       return updatedCards;
     });
+    console.log(cards[id]);
+  };
+
+  const changeTheme = (theme) => {
+    setCards(themes[theme]);
+    console.log(cards);
   };
 
   const changeColor = (color) => {
@@ -191,14 +443,14 @@ export default function Home() {
                 </a>
                 <h1 className="font-bold text-slate-900">Stratego kaartjes</h1>
               </div>
-              {/* <div className="items-center hidden space-x-0 sm:-my-px sm:ms-6 sm:flex">
+              <div className="items-center hidden space-x-0 sm:-my-px sm:ms-6 sm:flex">
                 <Link
                   href="https://tools.jeugdwerk.org"
                   className="items-center px-3 py-1 text-base font-semibold transition-all duration-150 ease-in-out rounded-md text-slate-800 hover:bg-gray-100"
                 >
                   Alle tools
                 </Link>
-              </div> */}
+              </div>
             </div>
           </div>
         </nav>
@@ -220,43 +472,56 @@ export default function Home() {
         </Alert>
 
         <div className="flex items-center justify-between w-full">
-          <Button
-            onClick={() => {
-              window.print();
-            }}
-          >
-            Kaartjes printen
-          </Button>
-          {isClient && (
-            <div className="relative inset-0 z-40 h-12 max-w-xs overflow-hidden border-none rounded-lg right-4 bottom-6 form-control border-color">
-              <Input
-                type="text"
-                value={color}
-                placeholder="Hexcode"
-                className="w-full h-full px-6 font-medium bg-white rounded-lg pl-14"
-                onChange={(e) => changeColor(e.target.value)}
-              />
-              <input
-                type="color"
-                value={color}
-                onChange={(newColor) => {
-                  changeColor(newColor.target.value);
-                }}
-                className="absolute transform -translate-y-1/2 border border-none rounded cursor-pointer top-1/2 w-7 h-7 left-4"
-                style={{ WebkitAppearance: "none" }}
-              />
-              <Button
-                variant="ghost"
-                size="icon"
-                className="absolute transform -translate-y-1/2 top-1/2 right-4"
-                onClick={() => {
-                  changeColor(getRandomColor());
-                }}
-              >
-                <Dices className="w-4 h-4" />
-              </Button>
-            </div>
-          )}
+          <div className="flex items-center space-x-2">
+            <Button
+              onClick={() => {
+                window.print();
+              }}
+            >
+              Kaartjes printen
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setCards(defaultCards);
+              }}
+            >
+              Reset
+            </Button>
+          </div>
+          <div className="flex items-center space-x-2">
+            <ThemeSwitch changeTheme={changeTheme} />
+            {isClient && (
+              <div className="relative inset-0 z-40 h-12 max-w-xs overflow-hidden border-none rounded-lg right-4 bottom-6 form-control border-color">
+                <Input
+                  type="text"
+                  value={color}
+                  placeholder="Hexcode"
+                  className="w-full h-full px-6 font-medium bg-white rounded-lg pl-14"
+                  onChange={(e) => changeColor(e.target.value)}
+                />
+                <input
+                  type="color"
+                  value={color}
+                  onChange={(newColor) => {
+                    changeColor(newColor.target.value);
+                  }}
+                  className="absolute transform -translate-y-1/2 border border-none rounded cursor-pointer top-1/2 w-7 h-7 left-4"
+                  style={{ WebkitAppearance: "none" }}
+                />
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="absolute transform -translate-y-1/2 top-1/2 right-4"
+                  onClick={() => {
+                    changeColor(getRandomColor());
+                  }}
+                >
+                  <Dices className="w-4 h-4" />
+                </Button>
+              </div>
+            )}
+          </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {[...Object.values(cards)]?.map((card) => (
