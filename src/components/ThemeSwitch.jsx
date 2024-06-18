@@ -23,10 +23,10 @@ const themes = [
     value: "default",
     label: "Standaard",
   },
-  // {
-  //   value: "studio100",
-  //   label: "Studio 100",
-  // },
+  {
+    value: "studio100",
+    label: "Studio 100",
+  },
   {
     value: "disney",
     label: "Disney",
