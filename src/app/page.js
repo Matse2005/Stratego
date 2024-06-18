@@ -430,7 +430,7 @@ export default function Stratego() {
 
   return (
     <main className="max-w-[1000px] print:max-w-[500px] mx-auto py-10 print:py-0">
-      <div className="space-y-5 print:hidden">
+      <div className="px-5 space-y-5 lg:px-0 print:px-0 print:hidden">
         <nav className="mx-auto bg-white rounded-lg max-w-screen-2xl">
           <div className="px-4 mx-auto sm:px-6 lg:px-8">
             <div className="flex justify-between h-16">
@@ -454,26 +454,19 @@ export default function Stratego() {
             </div>
           </div>
         </nav>
-        {/* <Alert>
-          <Info className="w-4 h-4" />
-          <AlertTitle>Opgepast</AlertTitle>
-          <AlertDescription>
-            De formaten van de kaartjes kunnen verschillen van de uiteindelijke
-            formaten tijdens afprinten, deze zal 9-12 kaartjes bevatten per A4
-            pagina.
-          </AlertDescription>
-        </Alert> */}
         <Alert>
           <Info className="w-4 h-4" />
           <AlertTitle>Opgepast</AlertTitle>
           <AlertDescription>
-            Op dit moment is alleen een groot scherm ondersteund.
+            Alle grote schermen worden ondersteund, maar de stijlen zijn nog
+            niet optimaal
           </AlertDescription>
         </Alert>
 
-        <div className="flex items-center justify-between w-full">
-          <div className="flex items-center space-x-2">
+        <div className="w-full space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between">
+          <div className="space-y-2 sm:items-center sm:space-x-2 sm:flex sm:space-y-0">
             <Button
+              className="w-full sm:w-auto"
               onClick={() => {
                 window.print();
               }}
@@ -482,22 +475,25 @@ export default function Stratego() {
             </Button>
             <Button
               variant="outline"
+              className="w-full sm:w-auto"
               onClick={() => {
-                setCards(defaultCards);
+                setCards(themes.default);
               }}
             >
               Reset
             </Button>
           </div>
-          <div className="flex items-center space-x-2">
-            <ThemeSwitch changeTheme={changeTheme} />
+          <div className="space-y-2 sm:flex sm:space-x-2 sm:items-center sm:space-y-0">
+            <div className="w-full sm:max-w-xs">
+              <ThemeSwitch changeTheme={changeTheme} />
+            </div>
             {isClient && (
-              <div className="relative inset-0 z-40 h-12 max-w-xs overflow-hidden border-none rounded-lg right-4 bottom-6 form-control border-color">
+              <div className="relative inset-0 z-40 w-full h-12 overflow-hidden border-none rounded-lg sm:max-w-xs right-4 bottom-6 form-control border-color">
                 <Input
                   type="text"
                   value={color}
                   placeholder="Hexcode"
-                  className="w-full h-full px-6 font-medium bg-white rounded-lg pl-14"
+                  className="h-full px-6 font-medium bg-white rounded-lg pl-14"
                   onChange={(e) => changeColor(e.target.value)}
                 />
                 <input
@@ -523,7 +519,7 @@ export default function Stratego() {
             )}
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           {[...Object.values(cards)]?.map((card) => (
             <UpdateableCard
               key={card.id}
@@ -536,7 +532,7 @@ export default function Stratego() {
           ))}
         </div>
       </div>
-      <div className="hidden grid-cols-3 print:grid">
+      <div className="hidden grid-cols-3 bg-white print:grid">
         {[...Object.values(cards)]?.map((card) =>
           [...Array(card.amount)]?.map((e, i) => (
             <Card

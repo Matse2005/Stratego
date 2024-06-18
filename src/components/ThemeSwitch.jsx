@@ -48,7 +48,7 @@ export function ThemeSwitch({ changeTheme }) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="justify-between "
+          className="justify-between w-full h-full"
         >
           {value
             ? themes.find((theme) => theme.value === value)?.label

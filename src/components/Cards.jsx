@@ -3,9 +3,10 @@
 export function Card({ card, cards, color, colorFg }) {
   return (
     <div
-      className="h-full bg-white border hover:opacity-50 w-[calc(500 / 3)]"
+      className="h-full mx-auto bg-white border hover:opacity-50 max-w-[333.33px] print:max-w-[166.67px]"
       style={{
         borderColor: color && color !== "#ffffff" ? color : "#000000",
+        // maxWidth: "calc(500px / 3)",
       }}
     >
       <div
