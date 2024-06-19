@@ -407,6 +407,21 @@ const themes = {
   },
 };
 
+const themesList = [
+  {
+    value: "default",
+    label: "Standaard",
+  },
+  {
+    value: "studio100",
+    label: "Studio 100",
+  },
+  {
+    value: "disney",
+    label: "Disney",
+  },
+];
+
 export default function Stratego() {
   const [cards, setCards] = useState(themes.default);
   const [color, setColor] = useState("#ffffff");
@@ -515,7 +530,7 @@ export default function Stratego() {
           </div>
           <div className="space-y-2 sm:flex sm:space-x-2 sm:items-center sm:space-y-0">
             <div className="w-full sm:max-w-xs">
-              <ThemeSwitch changeTheme={changeTheme} />
+              <ThemeSwitch themes={themesList} changeTheme={changeTheme} />
             </div>
             {isClient && (
               <div className="relative inset-0 z-40 w-full h-12 overflow-hidden border-none rounded-lg sm:max-w-xs right-4 bottom-6 form-control border-color">

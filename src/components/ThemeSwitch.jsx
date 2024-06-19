@@ -18,26 +18,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-const themes = [
-  {
-    value: "default",
-    label: "Standaard",
-  },
-  {
-    value: "studio100",
-    label: "Studio 100",
-  },
-  {
-    value: "disney",
-    label: "Disney",
-  },
-  // {
-  //   value: "piraten",
-  //   label: "Piraten",
-  // },
-];
-
-export function ThemeSwitch({ changeTheme }) {
+export function ThemeSwitch({ themes, changeTheme }) {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("default");
 
