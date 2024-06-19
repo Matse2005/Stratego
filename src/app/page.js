@@ -38,6 +38,7 @@ function getRandomColor() {
   }
   return color;
 }
+
 const themes = {
   default: {
     0: {
@@ -405,6 +406,128 @@ const themes = {
       numberVisible: false,
     },
   },
+  pirates: {
+    0: {
+      id: 0,
+      name: "Kanonskogels",
+      image: "/pirates/kanonskogels.png",
+      wins: [],
+      loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: false,
+      amount: 6,
+      numberVisible: false,
+    },
+    1: {
+      id: 1,
+      name: "Elizabeth Swann",
+      image: "/pirates/elizabeth-swann.png",
+      wins: [6],
+      loses: [2, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    2: {
+      id: 2,
+      name: "Jan Haring",
+      image: "/pirates/jan-haring.png",
+      wins: [1, 10],
+      loses: [3, 4, 5, 6, 7, 8, 9],
+      canTouch: true,
+      amount: 8,
+      numberVisible: true,
+    },
+    3: {
+      id: 3,
+      name: "Joshamee Gibbs",
+      image: "/pirates/joshamee-gibbs.png",
+      wins: [2, 9, 10],
+      loses: [4, 5, 6, 7, 8],
+      canTouch: true,
+      amount: 5,
+      numberVisible: true,
+    },
+    4: {
+      id: 4,
+      name: "Zwartbaard",
+      image: "/pirates/zwartbaard.png",
+      wins: [3, 8, 9, 10],
+      loses: [5, 6, 7],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    5: {
+      id: 5,
+      name: "Red Rackham",
+      image: "/pirates/red-rackham.webp",
+      wins: [4, 7, 8, 9, 10],
+      loses: [6],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    6: {
+      id: 6,
+      name: "Piet Piraat",
+      image: "/pirates/piet-piraat.png",
+      wins: [5, 6, 7, 8, 9, 10],
+      loses: [7],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    7: {
+      id: 7,
+      name: "Kapitein Haak",
+      image: "/pirates/kapitein-haak.png",
+      wins: [6, 7, 8, 9, 10],
+      loses: [1, 2, 3, 4, 5],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    8: {
+      id: 8,
+      name: "Davy Jones",
+      image: "/pirates/davy-jones.png",
+      wins: [7, 8, 9, 10],
+      loses: [1, 2, 3, 4],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    9: {
+      id: 9,
+      name: "Captain Hector Barbossa",
+      image: "/pirates/captain-hector-barbossa.png",
+      wins: [8, 9, 10],
+      loses: [1, 2, 3, 4, 5],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    10: {
+      id: 10,
+      name: "Captain Jack Sparrow",
+      image: "/pirates/captain-jack-sparrow.png",
+      wins: [9, 10],
+      loses: [1, 2, 3, 4, 5, 6, 7, 8],
+      canTouch: true,
+      amount: 1,
+      numberVisible: true,
+    },
+    99: {
+      id: 99,
+      name: "Jolly Roger",
+      image: "/pirates/jolly-roger.png",
+      wins: [],
+      loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      canTouch: false,
+      amount: 1,
+      numberVisible: false,
+    },
+  },
 };
 
 const themesList = [
@@ -420,9 +543,13 @@ const themesList = [
     value: "disney",
     label: "Disney",
   },
+  {
+    value: "pirates",
+    label: "Piraten",
+  },
 ];
 
-export default function Stratego() {
+export default function Home() {
   const [cards, setCards] = useState(themes.default);
   const [color, setColor] = useState("#ffffff");
   const [colorFg, setColorFg] = useState(getTextColor("#ffffff"));
