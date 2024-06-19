@@ -628,7 +628,9 @@ export default function Home() {
             </Button>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="outline">Reset</Button>
+                <Button variant="outline" className="w-full">
+                  Reset
+                </Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogHeader>

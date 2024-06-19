@@ -636,7 +636,9 @@ export default function Stratego() {
             </Button>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <Button variant="outline">Reset</Button>
+                <Button variant="outline" className="w-full">
+                  Reset
+                </Button>
               </AlertDialogTrigger>
               <AlertDialogContent>
                 <AlertDialogHeader>
