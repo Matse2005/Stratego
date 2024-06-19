@@ -71,6 +71,7 @@ export function ThemeSwitch({ changeTheme }) {
                     setOpen(false);
                     changeTheme(currentValue);
                   }}
+                  className="hover:cursor-pointer"
                 >
                   <Check
                     className={cn(
