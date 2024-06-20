@@ -11,11 +11,22 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogFooter,
+  DialogClose,
 } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 import { Input } from "./ui/input";
 import { ArrowLeftRight } from "lucide-react";
 
-export function UpdateableCard({ card, cards, color, colorFg, changeCard }) {
+export function UpdateableCard({
+  card,
+  cards,
+  color,
+  colorFg,
+  changeCard,
+  deleteCard,
+  cantBeDeleted,
+}) {
   const changePlace = (character, win) => {
     console.log(character + " " + (win ? "It is a win" : "It is a lose"));
 
@@ -172,6 +183,20 @@ export function UpdateableCard({ card, cards, color, colorFg, changeCard }) {
             Deze kaart kan tikken
           </label>
         </div>
+        {!cantBeDeleted.includes(card.id) && (
+          <DialogFooter>
+            <DialogClose asChild>
+              <Button
+                className="bg-red-700 hover:bg-red-600"
+                onClick={() => {
+                  deleteCard();
+                }}
+              >
+                Verwijderen
+              </Button>
+            </DialogClose>
+          </DialogFooter>
+        )}
       </DialogContent>
     </Dialog>
   );

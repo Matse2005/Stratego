@@ -660,6 +660,8 @@ export default function Stratego() {
     });
   };
 
+  const deleteCard = () => {};
+
   const changePlace = (character, win) => {
     // Create copies of wins and loses arrays to avoid direct state mutation
     let wins = [...newCard.wins];
@@ -775,7 +777,7 @@ export default function Stratego() {
                         onClick={() => {
                           setCards(themes.default);
                         }}
-                        variant="destructive"
+                        className="bg-red-700 hover:bg-red-600"
                       >
                         Resetten
                       </AlertDialogAction>
@@ -954,6 +956,8 @@ export default function Stratego() {
                   color={color}
                   colorFg={colorFg}
                   changeCard={changeCard}
+                  deleteCard={deleteCard}
+                  cantBeDeleted={cantBeDeleted}
                 />
               ))}
             </div>

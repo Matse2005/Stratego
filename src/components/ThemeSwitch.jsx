@@ -29,7 +29,7 @@ export function ThemeSwitch({ themes, changeTheme }) {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="justify-between w-full h-full py-3  h-[48px]"
+          className="justify-between w-full py-3 h-[48px]"
         >
           {value
             ? themes.find((theme) => theme.value === value)?.label
