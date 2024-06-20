@@ -15,13 +15,6 @@ import {
 import { Input } from "./ui/input";
 import { ArrowLeftRight } from "lucide-react";
 
-function sortNumbers(arr) {
-  arr.sort(function (a, b) {
-    return a - b;
-  });
-  return arr; // Return the sorted array
-}
-
 export function UpdateableCard({ card, cards, color, colorFg, changeCard }) {
   const changePlace = (character, win) => {
     console.log(character + " " + (win ? "It is a win" : "It is a lose"));
