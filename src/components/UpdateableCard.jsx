@@ -146,7 +146,9 @@ export function UpdateableCard({
                     }}
                   >
                     <p className="pr-6">
-                      {cards[win].id}. {cards[win].name}
+                      {(cards[win]?.numberVisible
+                        ? cards[win]?.id + ". "
+                        : "") + cards[win]?.name}
                     </p>
                     <ArrowLeftRight className="absolute hidden w-4 h-5 text-gray-500 transform -translate-y-1/2 group-hover:block top-1/2 right-2" />
                   </div>
@@ -165,7 +167,9 @@ export function UpdateableCard({
                     }}
                   >
                     <p className="pr-6">
-                      {cards[lose].id}. {cards[lose].name}
+                      {(cards[lose]?.numberVisible
+                        ? cards[lose]?.id + ". "
+                        : "") + cards[lose]?.name}{" "}
                     </p>
                     <ArrowLeftRight className="absolute hidden w-4 h-5 text-gray-500 transform -translate-y-1/2 group-hover:block top-1/2 right-2" />
                   </div>
