@@ -16,14 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className + "  bg-gray-100"}>
-        {children}
-        <script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="745f3276-ffbe-4010-8636-6c437de52bf5"
-        ></script>
-      </body>
+      <body className={inter.className + "  bg-gray-100"}>{children}</body>
     </html>
   );
 }
