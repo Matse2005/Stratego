@@ -83,7 +83,8 @@ export function UpdateableCard({
         <DialogHeader>
           <DialogTitle>Bewerk {card.name}</DialogTitle>
           <DialogDescription>
-            Bewerk {card.name} volledig naar je eigen wensen.
+            Bewerk {card.name} volledig naar wens, de wijzigingen zullen direct
+            toegepast worden geen nood aan het klikken van een knop.
           </DialogDescription>
         </DialogHeader>
         <div>
@@ -184,10 +185,16 @@ export function UpdateableCard({
           </label>
         </div>
         {!cantBeDeleted.includes(card.id) && (
-          <DialogFooter>
+          <>
+            <div class="flex items-center justify-center my-4">
+              <div class="border-t border-gray-300 flex-grow mr-2"></div>
+              <span class="px-2 text-gray-600 text-xs">Of</span>
+              <div class="border-t border-gray-300 flex-grow ml-2"></div>
+            </div>
+
             <DialogClose asChild>
               <Button
-                className="bg-red-700 hover:bg-red-600"
+                className="w-full bg-red-700 hover:bg-red-600"
                 onClick={() => {
                   deleteCard();
                 }}
@@ -195,7 +202,7 @@ export function UpdateableCard({
                 Verwijderen
               </Button>
             </DialogClose>
-          </DialogFooter>
+          </>
         )}
       </DialogContent>
     </Dialog>
