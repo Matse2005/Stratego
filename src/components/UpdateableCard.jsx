@@ -71,7 +71,7 @@ export function UpdateableCard({
   return (
     <Dialog>
       <DialogTrigger>
-        <div class="relative group">
+        <div class="relative group h-full">
           <Card
             key={card.id}
             card={card}
