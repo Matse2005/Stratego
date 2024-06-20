@@ -25,7 +25,7 @@ export function UpdateableCard({
   colorFg,
   changeCard,
   deleteCard,
-  cantBeDeleted,
+  cantBeDeleted = null,
 }) {
   const changePlace = (character, win) => {
     console.log(character + " " + (win ? "It is a win" : "It is a lose"));
@@ -189,7 +189,7 @@ export function UpdateableCard({
             Deze kaart kan tikken
           </label>
         </div>
-        {!cantBeDeleted.includes(card.id) && (
+        {cantBeDeleted !== null && !cantBeDeleted.includes(card.id) && (
           <>
             <div class="flex items-center justify-center my-4">
               <div class="border-t border-gray-300 flex-grow mr-2"></div>
