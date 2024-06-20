@@ -71,13 +71,18 @@ export function UpdateableCard({
   return (
     <Dialog>
       <DialogTrigger>
-        <Card
-          key={card.id}
-          card={card}
-          cards={cards}
-          color={color}
-          colorFg={colorFg}
-        />
+        <div class="relative group">
+          <Card
+            key={card.id}
+            card={card}
+            cards={cards}
+            color={color}
+            colorFg={colorFg}
+          />
+          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+            Klik om te bewerken
+          </div>
+        </div>
       </DialogTrigger>
       <DialogContent className="max-w-md">
         <DialogHeader>
