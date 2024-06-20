@@ -569,12 +569,13 @@ export default function Stratego() {
   const [colorFg, setColorFg] = useState(getTextColor("#ffffff"));
   const [isClient, setIsClient] = useState(false);
   const [newCard, setNewCard] = useState({
-    id: [...Object.values(cards)]
-      .filter((card) => card.id !== 99)
-      .map((card) => card.id)
-      .sort(function (a, b) {
-        return b - a;
-      })[0],
+    id:
+      [...Object.values(cards)]
+        .filter((card) => card.id !== 99)
+        .map((card) => card.id)
+        .sort(function (a, b) {
+          return b - a;
+        })[0] + 1,
     name: "",
     image: "",
     wins: [...Object.values(cards)]
