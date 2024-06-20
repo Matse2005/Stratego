@@ -203,7 +203,7 @@ export function UpdateableCard({
 
             <DialogClose asChild>
               <Button
-                className="w-full bg-red-700 hover:bg-red-600"
+                className="w-full bg-red-600 hover:bg-red-700"
                 onClick={() => {
                   deleteCard();
                 }}

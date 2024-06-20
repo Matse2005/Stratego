@@ -776,7 +776,7 @@ export default function Stratego() {
                         onClick={() => {
                           setCards(themes.default);
                         }}
-                        className="bg-red-700 hover:bg-red-600"
+                        className="bg-red-600 hover:bg-red-700"
                       >
                         Resetten
                       </AlertDialogAction>
