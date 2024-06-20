@@ -33,7 +33,8 @@ export function Card({ card, cards, color, colorFg }) {
                   key={win}
                   className="px-2 print:px-1 py-1 print:py-0 mr-2 print:mr-1 text-xs print:text-[6px] font-medium text-gray-700 bg-gray-200 rounded-full"
                 >
-                  {cards[win]?.id}. {cards[win]?.name}
+                  {(cards[win]?.numberVisible ? cards[win]?.id + ". " : "") +
+                    cards[win]?.name}
                 </span>
               ))}
             </div>
@@ -52,7 +53,8 @@ export function Card({ card, cards, color, colorFg }) {
                   key={lose}
                   className="px-2 print:px-1 py-1 print:py-0 mr-2 print:mr-1 text-xs print:text-[6px] font-medium text-gray-700 bg-red-200 rounded-full"
                 >
-                  {cards[lose]?.id}. {cards[lose]?.name}
+                  {(cards[lose]?.numberVisible ? cards[lose]?.id + ". " : "") +
+                    cards[lose]?.name}
                 </span>
               ))}
             </div>

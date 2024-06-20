@@ -61,7 +61,7 @@ const themes = {
       loses: [3],
       canTouch: false,
       amount: 1,
-      numberVisible: true,
+      numberVisible: false,
     },
     1: {
       id: 1,
@@ -183,7 +183,7 @@ const themes = {
       loses: [3],
       canTouch: false,
       amount: 1,
-      numberVisible: true,
+      numberVisible: false,
     },
     1: {
       id: 1,
@@ -305,7 +305,7 @@ const themes = {
       loses: [3],
       canTouch: false,
       amount: 1,
-      numberVisible: true,
+      numberVisible: false,
     },
     1: {
       id: 1,
@@ -427,7 +427,7 @@ const themes = {
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
       amount: 6,
-      numberVisible: true,
+      numberVisible: false,
     },
     1: {
       id: 1,
@@ -541,7 +541,6 @@ const themes = {
     },
   },
 };
-
 const themesList = [
   {
     value: "default",
