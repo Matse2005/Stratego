@@ -71,7 +71,7 @@ export function UpdateableCard({
   return (
     <Dialog>
       <DialogTrigger>
-        <div class="relative group h-full">
+        <div className="relative group h-full">
           <Card
             key={card.id}
             card={card}
@@ -79,7 +79,7 @@ export function UpdateableCard({
             color={color}
             colorFg={colorFg}
           />
-          <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity">
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition-opacity">
             Klik om te bewerken
           </div>
         </div>
@@ -195,10 +195,10 @@ export function UpdateableCard({
         </div>
         {cantBeDeleted !== null && !cantBeDeleted.includes(card.id) && (
           <>
-            <div class="flex items-center justify-center my-4">
-              <div class="border-t border-gray-300 flex-grow mr-2"></div>
-              <span class="px-2 text-gray-600 text-xs">Of</span>
-              <div class="border-t border-gray-300 flex-grow ml-2"></div>
+            <div className="flex items-center justify-center my-4">
+              <div className="border-t border-gray-300 flex-grow mr-2"></div>
+              <span className="px-2 text-gray-600 text-xs">Of</span>
+              <div className="border-t border-gray-300 flex-grow ml-2"></div>
             </div>
 
             <DialogClose asChild>
