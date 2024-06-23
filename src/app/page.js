@@ -20,6 +20,7 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
+import { leaveWarning } from "@/lib/stratego";
 
 function getTextColor(backgroundColor) {
   const rgb = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(backgroundColor);
@@ -560,6 +561,10 @@ export default function Home() {
     setColor(newColor);
     setColorFg(getTextColor(newColor));
     setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    leaveWarning();
   }, []);
 
   const changeCard = (id, key, value) => {
