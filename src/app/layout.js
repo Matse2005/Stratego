@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Stratego Kaartjes",
+  title: "Stratego Kaartjes | Jeugdwerk",
   description:
     "Maak aan de hand van deze tool snel en gemakkelijk volledig aanpasbare stratego kaartjes!",
   keywords:
