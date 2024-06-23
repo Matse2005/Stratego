@@ -368,7 +368,7 @@ const themes = {
   pirates: {
     0: {
       id: 0,
-      name: "Kanonskogels",
+      name: "Kanonskogel",
       image: "/pirates/kanonskogels.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
@@ -458,7 +458,7 @@ const themes = {
     },
     9: {
       id: 9,
-      name: "Captain Hector Barbossa",
+      name: "Hector Barbossa",
       image: "/pirates/captain-hector-barbossa.png",
       wins: [8, 9, 10],
       loses: [1, 2, 3, 4, 5],
@@ -468,7 +468,7 @@ const themes = {
     },
     10: {
       id: 10,
-      name: "Captain Jack Sparrow",
+      name: "Jack Sparrow",
       image: "/pirates/captain-jack-sparrow.png",
       wins: [9, 10],
       loses: [1, 2, 3, 4, 5, 6, 7, 8],
@@ -478,7 +478,7 @@ const themes = {
     },
     99: {
       id: 99,
-      name: "Jolly Roger",
+      name: "Piraten vlag",
       image: "/pirates/jolly-roger.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
