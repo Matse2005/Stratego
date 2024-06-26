@@ -111,6 +111,16 @@ export default function Home() {
             niet optimaal
           </AlertDescription>
         </Alert>
+        <Alert>
+          <Info className="w-4 h-4" />
+          <AlertTitle>Tip</AlertTitle>
+          <AlertDescription>
+            Je kan elk thema selecteren en kaartjes bewerken door er op te
+            klikken, daarna kan je de naam, de afbeelding, het aantal kaartjes
+            dat afgedrukt worden, of deze kaart kan tikken en van wie deze kaart
+            wint en verliest!
+          </AlertDescription>
+        </Alert>
 
         <div className="w-full space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between">
           <div className="space-y-2 sm:items-center sm:space-x-2 sm:flex sm:space-y-0">
