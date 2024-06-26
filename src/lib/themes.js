@@ -3,7 +3,7 @@ const themes = {
     0: {
       id: 0,
       name: "Bom",
-      image: "/default/bom.png",
+      image: "http://image.jeugdwerk.org/stratego/default/bom.png",
       wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
       loses: [3],
       canTouch: false,
@@ -13,7 +13,7 @@ const themes = {
     1: {
       id: 1,
       name: "Spion",
-      image: "/default/spion.png",
+      image: "http://image.jeugdwerk.org/stratego/default/spion.png",
       wins: [10],
       loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
       canTouch: true,
@@ -23,7 +23,7 @@ const themes = {
     2: {
       id: 2,
       name: "Verkenner",
-      image: "/default/verkenner.png",
+      image: "http://image.jeugdwerk.org/stratego/default/verkenner.png",
       wins: [1],
       loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -33,7 +33,7 @@ const themes = {
     3: {
       id: 3,
       name: "Mineur",
-      image: "/default/mineur.png",
+      image: "http://image.jeugdwerk.org/stratego/default/mineur.png",
       wins: [0, 1, 2],
       loses: [4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -43,7 +43,7 @@ const themes = {
     4: {
       id: 4,
       name: "Sergeant",
-      image: "/default/sergeant.png",
+      image: "http://image.jeugdwerk.org/stratego/default/sergeant.png",
       wins: [1, 2, 3],
       loses: [0, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -53,7 +53,7 @@ const themes = {
     5: {
       id: 5,
       name: "Luitenant",
-      image: "/default/luitenant.png",
+      image: "http://image.jeugdwerk.org/stratego/default/luitenant.png",
       wins: [1, 2, 3, 4],
       loses: [0, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -63,7 +63,7 @@ const themes = {
     6: {
       id: 6,
       name: "Kapitein",
-      image: "/default/kapitein.png",
+      image: "http://image.jeugdwerk.org/stratego/default/kapitein.png",
       wins: [1, 2, 3, 4, 5],
       loses: [0, 7, 8, 9, 10],
       canTouch: true,
@@ -73,7 +73,7 @@ const themes = {
     7: {
       id: 7,
       name: "Majoor",
-      image: "/default/majoor.png",
+      image: "http://image.jeugdwerk.org/stratego/default/majoor.png",
       wins: [1, 2, 3, 4, 5, 6],
       loses: [0, 8, 9, 10],
       canTouch: true,
@@ -83,7 +83,7 @@ const themes = {
     8: {
       id: 8,
       name: "Kolonel",
-      image: "/default/kolonel.png",
+      image: "http://image.jeugdwerk.org/stratego/default/kolonel.png",
       wins: [1, 2, 3, 4, 5, 6, 7],
       loses: [0, 9, 10],
       canTouch: true,
@@ -93,7 +93,7 @@ const themes = {
     9: {
       id: 9,
       name: "Generaal",
-      image: "/default/generaal.png",
+      image: "http://image.jeugdwerk.org/stratego/default/generaal.png",
       wins: [1, 2, 3, 4, 5, 6, 7, 8],
       loses: [0, 10],
       canTouch: true,
@@ -103,7 +103,7 @@ const themes = {
     10: {
       id: 10,
       name: "Maarschalk",
-      image: "/default/maarschalk.png",
+      image: "http://image.jeugdwerk.org/stratego/default/maarschalk.png",
       wins: [2, 3, 4, 5, 6, 7, 8, 9],
       loses: [0, 1],
       canTouch: true,
@@ -113,7 +113,7 @@ const themes = {
     99: {
       id: 99,
       name: "Vlag",
-      image: "/default/vlag.png",
+      image: "http://image.jeugdwerk.org/stratego/default/vlag.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
@@ -125,7 +125,8 @@ const themes = {
     0: {
       id: 0,
       name: "Mickey Mouse's Tovenaars Hoed",
-      image: "/disney/mickey-mouses-sorcerers-hats.png",
+      image:
+        "http://image.jeugdwerk.org/stratego/disney/mickey-mouses-sorcerers-hats.png",
       wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
       loses: [3],
       canTouch: false,
@@ -135,7 +136,7 @@ const themes = {
     1: {
       id: 1,
       name: "Tinkerbel",
-      image: "/disney/tinker-bell.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/tinker-bell.png",
       wins: [10],
       loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
       canTouch: true,
@@ -145,7 +146,7 @@ const themes = {
     2: {
       id: 2,
       name: "Peter Pan",
-      image: "/disney/peter-pan.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/peter-pan.png",
       wins: [1],
       loses: [0, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -155,7 +156,7 @@ const themes = {
     3: {
       id: 3,
       name: "Dagobert Duck",
-      image: "/disney/dagobert-duck.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/dagobert-duck.png",
       wins: [0, 1, 2],
       loses: [4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -165,7 +166,7 @@ const themes = {
     4: {
       id: 4,
       name: "Aladdin",
-      image: "/disney/aladdin.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/aladdin.png",
       wins: [1, 2, 3],
       loses: [0, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -175,7 +176,7 @@ const themes = {
     5: {
       id: 5,
       name: "Buzz Lightyear",
-      image: "/disney/buzz-lightyear.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/buzz-lightyear.png",
       wins: [1, 2, 3, 4],
       loses: [0, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -185,7 +186,7 @@ const themes = {
     6: {
       id: 6,
       name: "Raya",
-      image: "/disney/raya.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/raya.png",
       wins: [1, 2, 3, 4, 5],
       loses: [0, 7, 8, 9, 10],
       canTouch: true,
@@ -195,7 +196,7 @@ const themes = {
     7: {
       id: 7,
       name: "Maui",
-      image: "/disney/maui.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/maui.png",
       wins: [1, 2, 3, 4, 5, 6],
       loses: [0, 8, 9, 10],
       canTouch: true,
@@ -205,7 +206,7 @@ const themes = {
     8: {
       id: 8,
       name: "Elsa",
-      image: "/disney/elsa.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/elsa.png",
       wins: [1, 2, 3, 4, 5, 6, 7],
       loses: [0, 9, 10],
       canTouch: true,
@@ -215,7 +216,7 @@ const themes = {
     9: {
       id: 9,
       name: "Simba",
-      image: "/disney/simba.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/simba.png",
       wins: [1, 2, 3, 4, 5, 6, 7, 8],
       loses: [0, 10],
       canTouch: true,
@@ -225,7 +226,7 @@ const themes = {
     10: {
       id: 10,
       name: "Mickey Mouse",
-      image: "/disney/mickey-mouse.png",
+      image: "http://image.jeugdwerk.org/stratego/disney/mickey-mouse.png",
       wins: [2, 3, 4, 5, 6, 7, 8, 9],
       loses: [0, 1],
       canTouch: true,
@@ -235,7 +236,8 @@ const themes = {
     99: {
       id: 99,
       name: "Assepoester's Glazen Muiltje",
-      image: "/disney/cinderellas-glass-slipper.png",
+      image:
+        "http://image.jeugdwerk.org/stratego/disney/cinderellas-glass-slipper.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
@@ -247,7 +249,7 @@ const themes = {
     0: {
       id: 0,
       name: "Plopkoeken",
-      image: "/studio100/plopkoeken.jpg",
+      image: "http://image.jeugdwerk.org/stratego/studio100/plopkoeken.jpg",
       wins: [1, 2, 4, 5, 6, 7, 8, 9, 10],
       loses: [3],
       canTouch: false,
@@ -257,7 +259,7 @@ const themes = {
     1: {
       id: 1,
       name: "Kabouter Plop",
-      image: "/studio100/plop.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/plop.png",
       wins: [10],
       loses: [0, 2, 3, 4, 5, 6, 7, 8, 9],
       canTouch: true,
@@ -267,7 +269,7 @@ const themes = {
     2: {
       id: 2,
       name: "Gamekeeper",
-      image: "/studio100/gamekeepers.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/gamekeepers.png",
       wins: [1, 3, 4, 5, 6, 7, 8, 9, 10],
       loses: [0],
       canTouch: true,
@@ -277,7 +279,7 @@ const themes = {
     3: {
       id: 3,
       name: "Piet Piraat",
-      image: "/studio100/piet-piraat.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/piet-piraat.png",
       wins: [0, 1, 2],
       loses: [4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -287,7 +289,7 @@ const themes = {
     4: {
       id: 4,
       name: "K3",
-      image: "/studio100/k3.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/k3.png",
       wins: [1, 2, 3],
       loses: [0, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -297,7 +299,7 @@ const themes = {
     5: {
       id: 5,
       name: "Bumba",
-      image: "/studio100/bumba.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/bumba.png",
       wins: [1, 2, 3, 4],
       loses: [0, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -307,7 +309,7 @@ const themes = {
     6: {
       id: 6,
       name: "Mega Mindy",
-      image: "/studio100/mega-mindy.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/mega-mindy.png",
       wins: [1, 2, 3, 5],
       loses: [0, 4, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -317,7 +319,7 @@ const themes = {
     7: {
       id: 7,
       name: "Maya de Bij",
-      image: "/studio100/maya-de-bij.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/maya-de-bij.png",
       wins: [1, 2, 3, 4, 5, 6],
       loses: [0, 8, 9, 10],
       canTouch: true,
@@ -327,7 +329,7 @@ const themes = {
     8: {
       id: 8,
       name: "Nachtwacht",
-      image: "/studio100/nachtwacht.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/nachtwacht.png",
       wins: [1, 2, 3, 4, 5, 6, 7],
       loses: [0, 9, 10],
       canTouch: true,
@@ -337,7 +339,7 @@ const themes = {
     9: {
       id: 9,
       name: "Samson",
-      image: "/studio100/samson.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/samson.png",
       wins: [1, 2, 3, 4, 5, 6, 7, 8],
       loses: [0, 10],
       canTouch: true,
@@ -347,7 +349,7 @@ const themes = {
     10: {
       id: 10,
       name: "Freddy",
-      image: "/studio100/100-wolf.png",
+      image: "http://image.jeugdwerk.org/stratego/studio100/100-wolf.png",
       wins: [2, 3, 4, 5, 6, 7, 8, 9],
       loses: [0, 1],
       canTouch: true,
@@ -357,7 +359,7 @@ const themes = {
     99: {
       id: 99,
       name: "K3 Brooddoos",
-      image: "/studio100/k3-brooddoos.jpg",
+      image: "http://image.jeugdwerk.org/stratego/studio100/k3-brooddoos.jpg",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
@@ -369,7 +371,7 @@ const themes = {
     0: {
       id: 0,
       name: "Kanonskogel",
-      image: "/pirates/kanonskogels.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/kanonskogels.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
@@ -379,7 +381,7 @@ const themes = {
     1: {
       id: 1,
       name: "Elizabeth Swann",
-      image: "/pirates/elizabeth-swann.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/elizabeth-swann.png",
       wins: [6],
       loses: [2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: true,
@@ -389,7 +391,7 @@ const themes = {
     2: {
       id: 2,
       name: "Jan Haring",
-      image: "/pirates/jan-haring.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/jan-haring.png",
       wins: [1, 10],
       loses: [3, 4, 5, 6, 7, 8, 9],
       canTouch: true,
@@ -399,7 +401,7 @@ const themes = {
     3: {
       id: 3,
       name: "Joshamee Gibbs",
-      image: "/pirates/joshamee-gibbs.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/joshamee-gibbs.png",
       wins: [2, 9, 10],
       loses: [4, 5, 6, 7, 8],
       canTouch: true,
@@ -409,7 +411,7 @@ const themes = {
     4: {
       id: 4,
       name: "Zwartbaard",
-      image: "/pirates/zwartbaard.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/zwartbaard.png",
       wins: [3, 8, 9, 10],
       loses: [5, 6, 7],
       canTouch: true,
@@ -419,7 +421,7 @@ const themes = {
     5: {
       id: 5,
       name: "Red Rackham",
-      image: "/pirates/red-rackham.webp",
+      image: "http://image.jeugdwerk.org/stratego/pirates/red-rackham.webp",
       wins: [4, 7, 8, 9, 10],
       loses: [6],
       canTouch: true,
@@ -429,7 +431,7 @@ const themes = {
     6: {
       id: 6,
       name: "Piet Piraat",
-      image: "/pirates/piet-piraat.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/piet-piraat.png",
       wins: [5, 6, 7, 8, 9, 10],
       loses: [7],
       canTouch: true,
@@ -439,7 +441,7 @@ const themes = {
     7: {
       id: 7,
       name: "Kapitein Haak",
-      image: "/pirates/kapitein-haak.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/kapitein-haak.png",
       wins: [6, 7, 8, 9, 10],
       loses: [1, 2, 3, 4, 5],
       canTouch: true,
@@ -449,7 +451,7 @@ const themes = {
     8: {
       id: 8,
       name: "Davy Jones",
-      image: "/pirates/davy-jones.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/davy-jones.png",
       wins: [7, 8, 9, 10],
       loses: [1, 2, 3, 4],
       canTouch: true,
@@ -459,7 +461,8 @@ const themes = {
     9: {
       id: 9,
       name: "Hector Barbossa",
-      image: "/pirates/captain-hector-barbossa.png",
+      image:
+        "http://image.jeugdwerk.org/stratego/pirates/captain-hector-barbossa.png",
       wins: [8, 9, 10],
       loses: [1, 2, 3, 4, 5],
       canTouch: true,
@@ -469,7 +472,8 @@ const themes = {
     10: {
       id: 10,
       name: "Jack Sparrow",
-      image: "/pirates/captain-jack-sparrow.png",
+      image:
+        "http://image.jeugdwerk.org/stratego/pirates/captain-jack-sparrow.png",
       wins: [9, 10],
       loses: [1, 2, 3, 4, 5, 6, 7, 8],
       canTouch: true,
@@ -479,7 +483,7 @@ const themes = {
     99: {
       id: 99,
       name: "Piraten vlag",
-      image: "/pirates/jolly-roger.png",
+      image: "http://image.jeugdwerk.org/stratego/pirates/jolly-roger.png",
       wins: [],
       loses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       canTouch: false,
