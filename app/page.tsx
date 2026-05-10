@@ -138,9 +138,8 @@ export default function Page() {
             onUpdateCard={(updatedCard: CardType) => {
               handleSetTheme({
                 ...theme,
-                cards: { ...theme.cards, [updatedCard.id]: updatedCard },
+                cards: { ...theme.cards, [index]: updatedCard },
               } as Theme)
-              console.log(theme)
             }}
           >
             <Card
