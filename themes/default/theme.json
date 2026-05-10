@@ -1,0 +1,126 @@
+{
+  "id": "default",
+  "name": "Default",
+  "cards": [
+    {
+      "id": 0,
+      "name": "Bom",
+      "image": "https://image.jeugdwerk.org/stratego/default/bom.png",
+      "wins": [1, 2, 4, 5, 6, 7, 8, 9, 10],
+      "loses": [3],
+      "canTap": false,
+      "number": 1,
+      "numberVisible": false
+    },
+    {
+      "id": 1,
+      "name": "Spion",
+      "image": "https://image.jeugdwerk.org/stratego/default/spion.png",
+      "wins": [10],
+      "loses": [0, 2, 3, 4, 5, 6, 7, 8, 9],
+      "canTap": true,
+      "number": 1,
+      "numberVisible": true
+    },
+    {
+      "id": 2,
+      "name": "Verkenner",
+      "image": "https://image.jeugdwerk.org/stratego/default/verkenner.png",
+      "wins": [1],
+      "loses": [0, 3, 4, 5, 6, 7, 8, 9, 10],
+      "canTap": true,
+      "number": 8,
+      "numberVisible": true
+    },
+    {
+      "id": 3,
+      "name": "Mineur",
+      "image": "https://image.jeugdwerk.org/stratego/default/mineur.png",
+      "wins": [0, 1, 2],
+      "loses": [4, 5, 6, 7, 8, 9, 10],
+      "canTap": true,
+      "number": 1,
+      "numberVisible": true
+    },
+    {
+      "id": 4,
+      "name": "Sergeant",
+      "image": "https://image.jeugdwerk.org/stratego/default/sergeant.png",
+      "wins": [1, 2, 3],
+      "loses": [0, 5, 6, 7, 8, 9, 10],
+      "canTap": true,
+      "number": 5,
+      "numberVisible": true
+    },
+    {
+      "id": 5,
+      "name": "Luitenant",
+      "image": "https://image.jeugdwerk.org/stratego/default/luitenant.png",
+      "wins": [1, 2, 3, 4],
+      "loses": [0, 6, 7, 8, 9, 10],
+      "canTap": true,
+      "number": 4,
+      "numberVisible": true
+    },
+    {
+      "id": 6,
+      "name": "Kapitein",
+      "image": "https://image.jeugdwerk.org/stratego/default/kapitein.png",
+      "wins": [1, 2, 3, 4, 5],
+      "loses": [0, 7, 8, 9, 10],
+      "canTap": true,
+      "number": 4,
+      "numberVisible": true
+    },
+    {
+      "id": 7,
+      "name": "Majoor",
+      "image": "https://image.jeugdwerk.org/stratego/default/majoor.png",
+      "wins": [1, 2, 3, 4, 5, 6],
+      "loses": [0, 8, 9, 10],
+      "canTap": true,
+      "number": 4,
+      "numberVisible": true
+    },
+    {
+      "id": 8,
+      "name": "Kolonel",
+      "image": "https://image.jeugdwerk.org/stratego/default/kolonel.png",
+      "wins": [1, 2, 3, 4, 5, 6, 7],
+      "loses": [0, 9, 10],
+      "canTap": true,
+      "number": 3,
+      "numberVisible": true
+    },
+    {
+      "id": 9,
+      "name": "Generaal",
+      "image": "https://image.jeugdwerk.org/stratego/default/generaal.png",
+      "wins": [1, 2, 3, 4, 5, 6, 7, 8],
+      "loses": [0, 10],
+      "canTap": true,
+      "number": 2,
+      "numberVisible": true
+    },
+    {
+      "id": 10,
+      "name": "Maarschalk",
+      "image": "https://image.jeugdwerk.org/stratego/default/maarschalk.png",
+      "wins": [2, 3, 4, 5, 6, 7, 8, 9],
+      "loses": [0, 1],
+      "canTap": true,
+      "number": 1,
+      "numberVisible": true
+    },
+    {
+      "id": 99,
+      "name": "Vlag",
+      "image": "https://image.jeugdwerk.org/stratego/default/vlag.png",
+      "wins": [],
+      "loses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      "canTap": false,
+      "number": 1,
+      "numberVisible": false
+    }
+  ]
+}
