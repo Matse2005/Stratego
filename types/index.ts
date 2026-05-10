@@ -7,7 +7,7 @@ export const CardSchema = z.object({
   wins: z.array(z.number()),
   loses: z.array(z.number()),
   canTap: z.boolean(),
-  number: z.number(),
+  printAmount: z.number(),
   numberVisible: z.boolean(),
 });
 

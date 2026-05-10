@@ -1,6 +1,6 @@
 {
   "id": "default",
-  "name": "Default",
+  "name": "Standaard",
   "cards": [
     {
       "id": 0,
@@ -9,8 +9,8 @@
       "wins": [1, 2, 4, 5, 6, 7, 8, 9, 10],
       "loses": [3],
       "canTap": false,
-      "number": 1,
-      "numberVisible": false
+      "numberVisible": false,
+      "printAmount": 1
     },
     {
       "id": 1,
@@ -19,8 +19,8 @@
       "wins": [10],
       "loses": [0, 2, 3, 4, 5, 6, 7, 8, 9],
       "canTap": true,
-      "number": 1,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 1
     },
     {
       "id": 2,
@@ -29,8 +29,8 @@
       "wins": [1],
       "loses": [0, 3, 4, 5, 6, 7, 8, 9, 10],
       "canTap": true,
-      "number": 8,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 8
     },
     {
       "id": 3,
@@ -39,8 +39,8 @@
       "wins": [0, 1, 2],
       "loses": [4, 5, 6, 7, 8, 9, 10],
       "canTap": true,
-      "number": 1,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 1
     },
     {
       "id": 4,
@@ -49,8 +49,8 @@
       "wins": [1, 2, 3],
       "loses": [0, 5, 6, 7, 8, 9, 10],
       "canTap": true,
-      "number": 5,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 5
     },
     {
       "id": 5,
@@ -59,8 +59,8 @@
       "wins": [1, 2, 3, 4],
       "loses": [0, 6, 7, 8, 9, 10],
       "canTap": true,
-      "number": 4,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 4
     },
     {
       "id": 6,
@@ -69,8 +69,8 @@
       "wins": [1, 2, 3, 4, 5],
       "loses": [0, 7, 8, 9, 10],
       "canTap": true,
-      "number": 4,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 4
     },
     {
       "id": 7,
@@ -79,8 +79,8 @@
       "wins": [1, 2, 3, 4, 5, 6],
       "loses": [0, 8, 9, 10],
       "canTap": true,
-      "number": 4,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 4
     },
     {
       "id": 8,
@@ -89,8 +89,8 @@
       "wins": [1, 2, 3, 4, 5, 6, 7],
       "loses": [0, 9, 10],
       "canTap": true,
-      "number": 3,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 3
     },
     {
       "id": 9,
@@ -99,8 +99,8 @@
       "wins": [1, 2, 3, 4, 5, 6, 7, 8],
       "loses": [0, 10],
       "canTap": true,
-      "number": 2,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 2
     },
     {
       "id": 10,
@@ -109,18 +109,18 @@
       "wins": [2, 3, 4, 5, 6, 7, 8, 9],
       "loses": [0, 1],
       "canTap": true,
-      "number": 1,
-      "numberVisible": true
+      "numberVisible": true,
+      "printAmount": 1
     },
     {
-      "id": 99,
+      "id": 11,
       "name": "Vlag",
       "image": "https://image.jeugdwerk.org/stratego/default/vlag.png",
       "wins": [],
       "loses": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
       "canTap": false,
-      "number": 1,
-      "numberVisible": false
+      "numberVisible": false,
+      "printAmount": 1
     }
   ]
 }

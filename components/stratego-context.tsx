@@ -1,6 +1,6 @@
 "use client"
 
-import { getTextColor } from "@/lib/stratego-functions"
+import { getRandomColor, getTextColor } from "@/lib/stratego-functions"
 import themes from "@/themes"
 import { Theme } from "@/types"
 import {
@@ -18,6 +18,7 @@ interface StrategoContextProps {
   loadingStratego: boolean
   handleSetTheme: (theme: Theme) => void
   handleSetColor: (color: string) => void
+  reset: () => void
 }
 
 function useIsClient() {
@@ -46,6 +47,12 @@ const StrategoContextProvider: React.FC<{ children: React.ReactNode }> = ({
     setFgColor(getTextColor(color))
   }, [])
 
+  const reset = () => {
+    setTheme(themes["default"] ?? themes[0])
+    setColor(getRandomColor())
+    setFgColor(getTextColor(color))
+  }
+
   const contextValue = useMemo<StrategoContextProps>(
     () => ({
       theme,
@@ -54,8 +61,10 @@ const StrategoContextProvider: React.FC<{ children: React.ReactNode }> = ({
       loadingStratego: !isClient,
       handleSetTheme,
       handleSetColor,
+      reset,
     }),
-    [theme, color, fgColor, isClient, handleSetTheme, handleSetColor]
+
+    [theme, color, fgColor, isClient, handleSetTheme, handleSetColor, reset]
   )
 
   return (
