@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import useStrategoData from "@/hooks/useStrategoData"
 import { getRandomColor } from "@/lib/stratego-functions"
 import { useEffect, useSyncExternalStore } from "react"
+import { Spinner } from "@/components/ui/spinner"
 
 function useIsClient() {
   return useSyncExternalStore(
@@ -29,7 +30,11 @@ export default function Page() {
   }, [handleSetColor])
 
   if (loadingStratego || !isClient) {
-    return <p>Loading</p>
+    return (
+      <div className="flex min-h-screen w-full items-center justify-center gap-6">
+        <Spinner className="size-14 text-primary" />
+      </div>
+    )
   }
 
   return (
